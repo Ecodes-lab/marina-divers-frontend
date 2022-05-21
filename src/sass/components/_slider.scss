@@ -1,0 +1,131 @@
+.slider {
+  width: 100vw;
+  height: 25.8rem;
+  padding: 2rem 0;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  // &::-webkit-scrollbar {
+  //   width: 10px;
+  //   height: 10px;
+  // }
+  // &::-webkit-scrollbar-thumb {
+  //   background: transparent;
+  //   border-radius: 10px;
+  // }
+  // &::-webkit-scrollbar-track {
+  //   background: transparent;
+  // }
+
+  &__paper {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 32.3rem;
+    // height: 20rem;
+    height: 100%;
+    margin-right: 1.8rem;
+    border-radius: 10px;
+    border: none;
+    // background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    cursor: pointer;
+
+    &-content--title,
+    &-content--sub {
+      color: #fff;
+
+      &:focus {
+        color: #001027;
+      }
+    }
+
+    &-content-button {
+      opacity: 0;
+      display: none;
+      //   visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    &-content--button {
+      //   display: none;
+      border-radius: 1.92rem;
+      border: 0.1rem solid white;
+      width: 13.7rem;
+      height: 3.7rem;
+
+      & span {
+        color: #001027;
+        margin: 0 0 0 2.2rem;
+        font-family: PloniDL1AAA;
+        font-size: 1.36rem;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.85;
+        letter-spacing: 0.026rem;
+        text-align: center;
+      }
+
+      & button {
+        color: #001027;
+        font-family: PloniDL1AAA;
+        font-size: 1.36rem;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+      }
+    }
+
+    // &-content--title:focus,
+    // &-content--sub:focus {
+    //   margin: 8px 0 0;
+    //   font-family: PloniDL1AAA;
+    //   font-size: 18px;
+    //   font-weight: 900;
+    //   font-stretch: normal;
+    //   font-style: normal;
+    //   line-height: 1.33;
+    //   letter-spacing: normal;
+    //   text-align: center;
+    //   color: #001027;
+    // }
+  }
+
+  //   &__paper:focus {
+  //     transform: rotate(-180deg);
+  //     opacity: 0.92;
+  //     background-image: linear-gradient(
+  //       to top,
+  //       rgba(255, 255, 255, 0),
+  //       rgba(255, 255, 255, 1)
+  //     );
+  //     transform: scaleY(1.07);
+  //     transform-origin: bottom;
+  //     transition: all 0.3s ease;
+  //   }
+
+  //   &__paper:focus &__paper-content-button {
+  //     opacity: 1;
+  //     display: block;
+  //     // visibility: visible;
+  //     transition: all 0.3s ease;
+  //   }
+}
+
+.slider-stepper {
+  display: flex;
+  justify-content: center;
+}

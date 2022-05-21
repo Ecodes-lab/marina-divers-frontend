@@ -1,0 +1,68 @@
+.navigation {
+  position: relative;
+}
+
+.navigation__menu {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 50%;
+  //   transform: translateX(50%);
+  //   display: inline-block;
+  justify-content: center;
+}
+
+.navigation__signin-button {
+  //   position: absolute;
+  //   left: 0;
+  //   transform: translateX(0);
+  //   display: inline-block;
+  border-radius: 1.92rem;
+  border: 0.1rem solid white;
+  width: 13.7rem;
+  height: 3.7rem;
+
+  & span {
+    margin: 0 0 0 2.2rem;
+    font-family: PloniDL1AAA;
+    font-size: 1.36rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.85;
+    letter-spacing: 0.026rem;
+    text-align: center;
+  }
+
+  & button {
+    font-family: PloniDL1AAA;
+    font-size: 1.36rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+  }
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 1.6rem;
+  right: 3.1rem;
+  margin: 0 3.1rem 2.7rem 1rem;
+}
+
+.header__logo {
+  width: 5.3rem;
+  height: 3.5rem;
+}
+
+.header__logo-title {
+  margin: 0.9rem 1.8rem 3.2rem 15.5rem;
+  font-family: EzerBlock_OE-Inline;
+  font-size: 2.08rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+}
