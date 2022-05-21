@@ -1,0 +1,224 @@
+@import "../../scss/main.scss";
+
+// .navigation {
+//   z-index: 2;
+//   margin: 3rem;
+//   position: absolute;
+//   top: 0;
+//   right: 50%;
+//   transform: translateX(50%);
+//   display: inline-block;
+
+//   &__nav {
+//     margin: 0 3rem;
+//   }
+
+//   &__list {
+//     list-style: none;
+//   }
+
+//   &__item {
+//     display: inline-block;
+//     margin-left: 3.6rem;
+//   }
+
+//   &__link {
+//     font-family: PloniDLAAA;
+//     font-size: 1.5rem;
+//     font-weight: 500;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: normal;
+//     letter-spacing: normal;
+//     text-align: center;
+//     color: #fff;
+//     text-decoration: none;
+//   }
+
+//   //FUNCTIONALITY
+//   &__checkbox:checked ~ &__background {
+//     transform: scale(80);
+//   }
+
+//   &__checkbox:checked ~ &__nav {
+//     opacity: 1;
+//     width: 100%;
+//   }
+
+//   //ICON
+//   &__icon {
+//     position: relative;
+//     margin-top: 3.5rem;
+
+//     &,
+//     &::before,
+//     &::after {
+//       width: 3rem;
+//       height: 2px;
+//       background-color: $color-grey-dark-3;
+//       display: inline-block;
+//     }
+
+//     &::before,
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       left: 0;
+//       transition: all 0.2s;
+//     }
+
+//     &::before {
+//       top: -0.8rem;
+//     }
+//     &::after {
+//       top: 0.8rem;
+//     }
+//   }
+
+//   &__button:hover &__icon::before {
+//     top: -1rem;
+//   }
+
+//   &__button:hover &__icon::after {
+//     top: 1rem;
+//   }
+
+//   &__checkbox:checked + &__button &__icon {
+//     background-color: transparent;
+//   }
+
+//   &__checkbox:checked + &__button &__icon::before {
+//     top: 0;
+//     transform: rotate(135deg);
+//   }
+
+//   &__checkbox:checked + &__button &__icon::after {
+//     top: 0;
+//     transform: rotate(-135deg);
+//   }
+// }
+
+.navigation__nav {
+  position: relative;
+  margin: 0 3rem;
+}
+
+.navigation__list {
+  list-style: none;
+  //   text-align: center;
+}
+
+.navigation__item {
+  display: inline;
+  margin-left: 3.6rem;
+  justify-content: center;
+  align-content: center;
+
+  &:hover .navigation__link-megamenu {
+    top: 2.5rem;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+  }
+}
+
+.navigation__link {
+  //   display: block;
+  font-family: PloniDLAAA;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navigation__link-megamenu {
+  z-index: 1000;
+  top: 8.5rem;
+  position: absolute;
+  //   right: -10%;
+  //   background-color: #fff;
+  //   align-items: center;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 60vw;
+  //   height: 20.5rem;
+  padding: 2rem;
+  //   align-content: center;
+  //   justify-content: center;
+  border-radius: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  //   transform: scale(0);
+
+  &:hover {
+    transform: rotate(-180deg);
+    opacity: 0.92;
+    background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1)
+    );
+    transform: scaleY(1.01);
+    transform-origin: bottom;
+  }
+
+  &-link {
+    font-family: PloniDLAAA;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  // &-desc {
+  //   font-family: PloniDLAAA;
+  //   font-size: 1.5rem;
+  //   font-weight: 500;
+  //   font-stretch: normal;
+  //   font-style: normal;
+  //   line-height: normal;
+  //   letter-spacing: normal;
+  //   text-align: center;
+  //   text-decoration: none;
+  //   transition: all 0.3s ease;
+  //   color: #fff;
+  // }
+
+  &:hover &-link {
+    color: rgba(6, 83, 166, 0.871);
+
+    &:hover {
+      color: #172765;
+    }
+  }
+
+  &:hover &-desc {
+    color: black;
+  }
+}
+
+.navigation__link-megamenu-row {
+  &:not(:first-child, :last-child) {
+    margin: 2rem auto;
+  }
+  //   padding: 22rem;
+  //   justify-content: center;
+  //   align-items: center;
+
+  .navigation__link-megamenu-col {
+    align-self: center;
+  }
+}
